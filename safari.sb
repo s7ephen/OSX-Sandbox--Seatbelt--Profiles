@@ -1,0 +1,51 @@
+(version 1)
+(debug deny)
+
+(allow network-outbound)
+
+(allow ipc-posix-shm)
+
+;(allow process-exec 
+;    (regex 
+;        #"^/Applications/Safari.app/*"
+;    )
+;)
+(allow sysctl-read)
+(allow file-read-metadata)
+(allow signal)
+(allow process*)
+;(allow mach*)
+(allow mach-lookup)
+;(allow process-exec 
+;    (regex 
+;        #"^/System/Library/CoreServices/*"
+;    )
+;)
+;; Allow these reads:
+(allow file-read*
+    (regex
+        #"^/Users/[^.]+/$"
+        #"^/Users/[^.]+/Downloads"
+        #"^/Users/[^.]+/Library"
+        #"^/Users/[^.]+/Public"
+        #"^/Users/[^.]+/Sites"
+        #"^/Applications/Safari.app"
+        #"^/Library/*"
+        #"^/System/Library/*"
+        #"^/usr/lib/*"
+        #"^/usr/share/*"
+        #"^/private/*"
+        #"^/dev/*"
+    )
+)
+;; Allow these writes:
+(allow file-write*
+    (regex
+        #"^/Users/[^.]+/Downloads/*"
+        #"^/Users/[^.]+/Library/.*"
+        #"^/private/var/*"
+        #"^/dev/dtracehelper"
+    )
+)
+(deny default)
+

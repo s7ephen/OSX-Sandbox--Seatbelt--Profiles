@@ -1,0 +1,32 @@
+(version 1)
+(debug allow)
+
+(import "bsd.sb")
+
+(allow process-exec (regex #"^/usr/local/stow/silc-client-1.1.8/bin/silc$"))
+
+;;(allow process-fork)
+
+(allow file-read-data file-read-metadata
+  (regex 
+    #"^/usr/local/stow/silc-client-1.1.8/"
+    #"^/opt/local/"
+    #"^/etc/"
+    #"^/usr/"
+  )
+)
+
+(allow file-read* file-write*
+  (regex
+    #"^/Users/[^.]+/.silc$"
+    #"^/Users/[^.]+/.silc/"
+  )
+)
+
+;; Too loose
+(allow mach*)
+
+;; Definitely too loose
+(allow network*)
+
+(deny default)

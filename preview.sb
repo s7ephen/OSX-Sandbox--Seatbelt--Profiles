@@ -1,0 +1,48 @@
+(version 1)
+(debug deny)
+
+(import "bsd.sb")
+(allow signal)
+(allow ipc-posix-shm)
+(allow process*)
+(allow mach-lookup)
+;(allow mach*)
+;(allow process-exec (regex #"^/Applications/Preview.app/Contents/MacOS/Preview$"))
+
+;;(allow process-fork)
+
+(allow file-read*
+    (regex
+        #"^/Users/[^.]+/$"
+        #"^/Users/[^.]+/Library"
+        #"^/Users/[^.]+/Public"
+        #"^/Applications/Preview.app"
+        #"^/Library/*"
+        #"^/System/Library/*"
+        #"^/usr/lib/*"
+        #"^/usr/share/*"
+        #"^/private/*"
+        #"^/dev/*"
+    )   
+)
+
+;(allow file-read-metadata
+;       (literal "/")
+;       (literal "/Library/Preferences/.GlobalPreferences.plist")
+;       (literal "/etc")
+;       (literal "/private/var/root")
+;       (literal "/private/var/root/Library/Preferences/.GlobalPreferences.plist")
+;       (literal "/var")
+;       (literal "/usr/")
+;       (subpath "/System")
+;)
+
+
+(allow file-read-data file-write* file-read-metadata
+  (regex 
+    #"^/Users/[^.]+/Library/Application Support/Preview"
+  )
+)
+
+(deny network*)
+(deny default)
