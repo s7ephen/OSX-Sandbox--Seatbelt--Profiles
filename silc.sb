@@ -1,6 +1,6 @@
 (version 1)
 (debug allow)
-
+;; Based on Dino Dai Zovi's profile
 (import "bsd.sb")
 
 (allow process-exec (regex #"^/usr/local/stow/silc-client-1.1.8/bin/silc$"))
