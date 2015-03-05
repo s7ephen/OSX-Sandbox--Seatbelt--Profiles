@@ -100,6 +100,8 @@ Safe hacking and remember to fasten your seatbelt :)
 
 - [Dion Blazakis's Blackhat Talk](http://docs.google.com/viewer?aa=v&q=cache:3ZoPr0y_aeMJ:https://media.blackhat.com/bh-dc-11/Blazakis/BlackHat_DC_2011_Blazakis_Apple_Sandbox-wp.pdf)
 
+- [@synackpse's OSX Sandboxing Intro Blogpost](http://blog.squarelemon.com/blog/2015/02/10/os-x-sandbox-quickstart/)
+
 - [Apple's Sandbox Guide](http://reverse.put.as/wp-content/uploads/2011/09/Apple-Sandbox-Guide-v1.0.pdf)
 
 - [Chromium sandboxing](http://www.chromium.org/developers/design-documents/sandbox/osx-sandboxing-design)
