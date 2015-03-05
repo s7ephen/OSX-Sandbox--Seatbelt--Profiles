@@ -13,7 +13,7 @@ To get things rolling immediately you should just be able to run the correspondi
 ```
     $ ./safari.sh 
 ```
-this should fire up a "fresh" Safari.  To learn more about the sandbox profile syntax you can't easily [google for them](http://www.google.com/search?q=version+1+filetype:sb). You can however learn a bit by looking at the ones that ship with OS X by default by dropping to a terminal and looking in /usr/share/sandbox:
+this should fire up a "fresh" Safari.  To learn more about the sandbox profile syntax you can't easily [google for them](http://www.google.com/search?q=version+1+filetype:sb). You can however learn a bit by looking at the ones that ship with OS X by default by dropping to a terminal and looking in ```/usr/share/sandbox```:
 ```
     stephens-computer:sandbox_profiles s7$ cd /usr/share/sandbox/
     stephens-computer:sandbox s7$ ls
@@ -28,6 +28,6 @@ this should fire up a "fresh" Safari.  To learn more about the sandbox profile s
     stephens-computer:sandbox s7$
 ```
 
-You can also glean a bit more by checking the manpages for sandbox-exec, and sandbox_init.
+You can also glean a bit more by checking the manpages for ```sandbox-exec```, and ```sandbox_init```.
 
 
