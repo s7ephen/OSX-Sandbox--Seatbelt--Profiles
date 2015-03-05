@@ -5,7 +5,7 @@
 
 This is a collection of profiles for the OSX Application  Sandbox called Seatbelt. For some background information on how this whole thing works, check out [Dion Blazakis's Blackhat Talk](http://docs.google.com/viewer?aa=v&q=cache:3ZoPr0y_aeMJ:https://media.blackhat.com/bh-dc-11/Blazakis/BlackHat_DC_2011_Blazakis_Apple_Sandbox-wp.pdf).
 
-My hopes are that people will start to make their own by maybe forking this repository and adding new rules and profiles to it. 
+My hopes are that people will start to make their own by maybe forking this repository and adding new rules and profiles to it and then committing back to here with pull-requests.
 
 ## Basic Usage
 
